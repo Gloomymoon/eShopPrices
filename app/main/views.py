@@ -1,7 +1,7 @@
 import random
 
 from flask import render_template
-from pyecharts import Scatter3D
+#from pyecharts import Scatter3D
 
 from . import main
 
@@ -13,7 +13,7 @@ REMOTE_HOST = "https://pyecharts.github.io/assets/js"
 def index():
     return render_template('index.html')
 
-
+'''
 @main.route('/charts')
 def pyecharts():
     s3d = scatter3d()
@@ -21,13 +21,13 @@ def pyecharts():
                            myechart=s3d.render_embed(),
                            host=REMOTE_HOST,
                            script_list=s3d.get_js_dependencies())
-
+'''
 
 @main.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
 
-
+'''
 def scatter3d():
     data = [generate_3d_random_point() for _ in range(80)]
     range_color = [
@@ -42,3 +42,4 @@ def generate_3d_random_point():
     return [random.randint(0, 100),
             random.randint(0, 100),
             random.randint(0, 100)]
+'''
