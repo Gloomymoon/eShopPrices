@@ -1,4 +1,4 @@
-import urllib.request
+import urllib2
 
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -13,9 +13,9 @@ def test_job():
 
 def get_page():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
-    req = urllib.request.Request(url="https://eshop-prices.com/prices", headers=headers)
+    req = urllib2.Request(url="https://eshop-prices.com/prices", headers=headers)
 
-    fp = urllib.request.urlopen(req)
+    fp = urllib2.Request.urlopen(req)
     mybytes = fp.read()
 
     html_doc = mybytes.decode("utf8")

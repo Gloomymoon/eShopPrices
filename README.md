@@ -1,5 +1,5 @@
 # eShopPrices
-Nintendo eShop Game Prices
+Nintendo eShop Game Prices for python 2.7
 
 ## Installation
 ```
